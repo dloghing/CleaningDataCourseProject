@@ -28,7 +28,9 @@ measurements taken in each sample.  These were used as the data which
 was grouped by subject_id and activity_name, so the columns in the
 result set are a mean of the means from each measurement.   
 
-Magnitude refers to value of the vector of the combined X,Y,Z measurements.
+Magnitude refers to value of the vector of the combined X,Y,Z
+measurements. Units are not specified in the original documentation,
+but are probably in Gs.  
 
 Calculated Columns: 
 tBodyAccMag-mean: Mean of the magnitude of body acceleration in the time domain
