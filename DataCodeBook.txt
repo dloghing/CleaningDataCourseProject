@@ -1,0 +1,51 @@
+
+Study Design: 
+
+The data set was retrieved from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The files used: 
+In the top level directory: features.txt, activity_labels.txt
+In train: X_train.txt, y_train.txt, subject_train.txt
+In test: X_test.txt, y_test.txt, subject_test.txt
+
+The data in the "Inertial Signals" directories were summarized in
+X_train and X_test, according to the documentation accompanying the
+data set.
+
+Code Book
+
+subject_id: integer.  Identifier of the study participant
+activity_name: string Identifier of the study activity undertaken in the sample.
+The possible values are: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+All remaining values are doubles (floating point).  They are the mean
+values of the collection of measurements taken for each subject
+engaging in one of the activities.   
+
+The “mean” in the column names refers to the mean of the 128
+measurements taken in each sample.  These were used as the data which
+was grouped by subject_id and activity_name, so the columns in the
+result set are a mean of the means from each measurement.   
+
+Magnitude refers to value of the vector of the combined X,Y,Z measurements.
+
+Calculated Columns: 
+tBodyAccMag-mean: Mean of the magnitude of body acceleration in the time domain
+tGravityAccMag-mean: Mean of the magnitude of gravity in the time domain      
+tBodyAccJerkMag-mean: Mean of magnitude of body “jerk” (change in acceleration) in the time domain      
+tBodyGyroMag-mean: Mean of magnitude of gyroscope measurement in the time domain         
+tBodyGyroJerkMag-mean: Mean of magnitude of change in gyroscope measurement in the time domain     
+fBodyAccMag-mean: Mean of Fourier Transform (frequency) of body acceleration         
+fBodyBodyAccJerkMag-mean: Mean of Fourier Transform (frequency) of body “jerk” (change in acceleration)
+fBodyBodyGyroMag-mean: Mean of Fourier Transform (frequency) of gyroscope measurement    
+fBodyBodyGyroJerkMag-mean: Mean of Fourier Transform (frequency) of  change in gyroscope measurement
+tBodyAccMag-std: Std. Dev. of the magnitude of body acceleration in the time domain      
+tGravityAccMag-std: Std. Dev. of the magnitude of gravity in the time domain        
+tBodyAccJerkMag-std: Std. Dev. of body “jerk” (change in acceleration) in the time domain        
+tBodyGyroMag-std: Std. Dev. of gyroscope measurement in the time domain          
+tBodyGyroJerkMag-std: Std. Dev. of change in gyroscope measurement in the time domain     
+fBodyAccMag-std: Std. Dev. of Fourier Transform (frequency) of body acceleration           
+fBodyBodyAccJerkMag-std: Std. Dev. Fourier Transform (frequency) of body “jerk” (change in acceleration)   
+fBodyBodyGyroMag-std: Std. Dev. Fourier Transform (frequency) of gyroscope measurement       
+fBodyBodyGyroJerkMag-std: Std. Dev. of Fourier Transform (frequency) of  change in gyroscope measurement  

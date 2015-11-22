@@ -15,13 +15,13 @@ rename_columns <- function(table_name) {
 }
 
 run_analysis <- function() {
-
+    
+    #Set working directory here if needed.
     #setwd("D:\\dlog\\CourseraDataScience\\GettingCleaningData\\CourseProject\\UCI HAR Dataset")
     
     #DLL 20151120 Load the list of feature descriptions
     feature_list <- read.table("features.txt", sep = "", col.names = c("colnum", "colname"))
-    #names(feature_list)[names(feature_list) == "V2"] <- "colname"
-    
+
     #DLL 201520 Read the activity description labels
     activity_labels <- read.table("activity_labels.txt", sep="", col.names = c("activity_id", "activity_name"))
     
@@ -31,9 +31,7 @@ run_analysis <- function() {
     
     #DLL 20151120 Load the activity data for the training set
     training_activity <- read.table("train\\Y_train.txt", sep = "", col.names = c("activity_id"))
-    #colnames(training_activity)[1] <- "activity_id"
-    #xtrain <- cbind(xtrain, training_activity)
-    
+
     #DLL 20151120 Load the subject IDs for the training set
     training_subjects <- read.table("train\\subject_train.txt", sep = "", col.names = c("subject_id"))
     #colnames(training_subjects)[1] <- "subject_id"
@@ -47,9 +45,7 @@ run_analysis <- function() {
     
     #DLL 20151120 Load the activity data for the test set
     test_activity <- read.table("test\\Y_test.txt", sep = "", col.names = c("activity_id"))
-    #colnames(test_activity)[1] <- "activity_id"
-    #xtest <- cbind(xtest, test_activity)
-    
+
     #DLL 20151120 Load the subject IDs for the test set
     test_subjects <- read.table("test\\subject_test.txt", sep = "", col.names = c("subject_id"))
     #colnames(test_subjects)[1] <- "subject_id"
@@ -74,6 +70,8 @@ run_analysis <- function() {
     
     #DLL 20151120 Write out the results
     #write.table(result_set,"mean_values.txt", row.names = FALSE)
+    
+    return(result_set)
     
 }
 
